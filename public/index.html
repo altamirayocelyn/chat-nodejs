@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chat en tiempo real</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="chat">
+    <header>
+      <h1>Chat en tiempo real</h1>
+      <span id="usuarios">0 conectados</span>
+    </header>
+
+    <ul id="mensajes" aria-live="polite"></ul>
+
+    <form id="formulario">
+      <input id="entrada" type="text" placeholder="Escribe un mensaje..." autocomplete="off" maxlength="300" required>
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="chat.js"></script>
+</body>
+</html>
